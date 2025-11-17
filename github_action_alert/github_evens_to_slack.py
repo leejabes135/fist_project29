@@ -14,7 +14,6 @@ SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK_URL")  # Slack Incoming Webhook URL
 # 새 이벤트 체크용 (마지막으로 본 이벤트 ID를 저장할 파일)
 LAST_EVENT_FILE = "last_event_id.txt"
 
-
 def get_recent_events(per_page=20):
     """레포의 최근 이벤트 목록 가져오기"""
     url = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/events"
@@ -120,6 +119,8 @@ def main():
     print("[INFO] 마지막 이벤트 ID:", last_event_id)
 
     events = get_recent_events(per_page=20)
+    print("[INFO] GitHub에서 가져온 이벤트 개수:", len(events))
+    
 
     if not events:
         print("[INFO] 이벤트가 없습니다.")
