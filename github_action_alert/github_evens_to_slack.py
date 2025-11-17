@@ -80,7 +80,6 @@ def format_push_event(event: dict) -> str:
         f"📦 GitHub Push 이벤트\n"
         f"• 저장소 : {repo_full}\n"
         f"• 브랜치 : {branch}\n"
-        f"• 커밋 수 : {commit_count}\n"
         f"• 푸시한 사람 : {actor}\n"
     )
     return text
