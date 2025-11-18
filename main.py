@@ -3,7 +3,7 @@
 #각 모듈의 메인 함수를 안전하게 호출하면서, 오류가 발생해도 전체 프로그램이 중단되지 않도록 예외 처리
 #이 네 가지 작업을 오전 9시에 호출하도록 설정하였고 schedule 라이브러리를 이용하여 스케줄링 작업을 실시했습니다.
 
-#pip install schedule
+#pip install schedule -> 스케줄러
 import schedule
 import time
 
